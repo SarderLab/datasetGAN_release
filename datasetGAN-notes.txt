@@ -1,0 +1,12 @@
+docker run -it --rm --entrypoint bash --runtime nvidia -v /hdd/brendonl/datasetGAN_release/:/datasetGAN_release --dns 8.8.8.8 pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
+
+
+apt-get update
+apt-get install ffmpeg libsm6 libxext6  -y
+pip install opencv-python
+pip install scipy
+pip install imageio
+
+python train_interpreter.py --exp experiments/cat_16.json
+
+python train_interpreter.py --generate_data True --exp experiments/cat_16.json --resume model_dir/cat_16 --num_sample 12
