@@ -1,0 +1,20 @@
+{
+  "exp_dir": "model_dir/glom_2",
+    "batch_size": 64,
+  "category": "face",
+  "debug": false,
+  "dim": [256, 256, 5088],
+  "deeplab_res": 256,
+  "number_class": 2,
+  "testing_data_number_class": 2,
+  "max_training": 24,
+  "stylegan_ver": "1",
+  "annotation_data_from_w": false,
+  "annotation_mask_path": "./dataset_release/annotation/training_data/glom_processed",
+  "testing_path": "./dataset_release/annotation/testing_data/glom_2_class",
+  "average_latent": "./dataset_release/training_latent/glom_2/avg_latent_stylegan1_test.npy",
+  "annotation_image_latent_path": "./dataset_release/training_latent/glom_2/latent_stylegan1.npy",
+  "stylegan_checkpoint": "./dataset_release/stylegan_pretrain/network-snapshot-017560.for_g_all.pt",
+  "model_num": 10,
+    "upsample_mode":"bilinear"
+ }
